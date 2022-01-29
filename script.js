@@ -1,16 +1,9 @@
 ;(()=>{
-let touch = 0
 $('.first').click(()=> {
-    if(touch>=1) 
-    {
-        $('.first').fadeOut()
+    $('.first').fadeOut()
         setTimeout(()=> {
             $('.second').fadeIn()
         }, 400)
-    }
-    else {
-        touch++
-    }
 })
  
 
@@ -26,14 +19,12 @@ function goOut() {
 
 function lionMove() {
     goOn()
-    $('.white-space-lion').animate({left:'+=6.5vh'})
+    $('.white-space-lion').animate({left:'+=5vw'})
 }
 
 
 $('.second').click(()=>{
-    if(true)
-    {
-        $('#sol1').fadeIn()
+    $('#sol1').fadeIn()
         $('#sol2').fadeIn()
         setTimeout(()=>{
             $('#first-text').fadeOut()
@@ -65,7 +56,28 @@ $('.second').click(()=>{
         }
         setTimeout(()=>{
             $('.second').fadeOut()
-        }, 7000)
+        }, 6500)
+
+        setTimeout(()=>{
+            $('.third').fadeIn()
+        }, 7500)
+})
+
+let lion_out = ["#S1", "#ST1", "#STA1", "#STAR1", "#START1"]
+let lion_on = ["#S2", "#ST2", "#STA2", "#STAR2", "#START2"]
+$('#start-button-lion').click(()=>{
+    for(let i=0;i<5;i++)
+    {
+        setTimeout(()=>{
+            $('#start-button-lion').animate({left:"+=5vw"})
+        }, i * 200)
+        setTimeout(()=>{
+            $(lion_out[i]).fadeOut()
+        }, i * 400)
+        
+        setTimeout(()=>{
+            $(lion_on[i]).fadeIn()
+        }, i * 400)
     }
 })
 })()

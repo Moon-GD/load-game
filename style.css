@@ -15,10 +15,10 @@ main {
     background-image: url('assets/ipad.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 120vh;
+    height: 100vh;
     width: 60vw;
     margin-left: 20vw;
-    margin-right: 20svw;
+    margin-right: 20vw;
 }
 
 nav {
@@ -38,8 +38,21 @@ nav img {
 .map-area {
     margin:4vh auto 0;
     width: 50vw;
-    height: 33vh;
+    height: 15vw;
     background-color: rgba(255, 255, 255, 0);
+}
+
+.white-space-load1 {
+    width: 5vw;
+    height: 5vw;
+    background-color: #fff;
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:black;
+    border:1px solid rgba(0,0,0,1);
 }
 
 .white-space-load {
@@ -57,8 +70,8 @@ nav img {
 
 .white-space-lion {
     left:0;
-    width: 7vh;
-    height: 7vh;
+    width: 4.5vw;
+    height: 4.5vw;
     position: relative;
 }
 
@@ -73,7 +86,7 @@ nav img {
     background-color: rgba(0, 0, 0, 0.3);
     height: 30vh;
     border-radius: 3vh;
-    margin:3vh auto 0;
+    margin:3vw auto 0;
     width: 40vw;
     display:flex;
     flex-direction:column;
@@ -95,6 +108,9 @@ nav img {
     flex-direction:row;
     justify-content: center;
     align-items: center;
+    font-weight: 700;
+    font-size: 3vh;
+    margin-bottom: 0;
 }
 
 .white-wrapper {
@@ -103,8 +119,8 @@ nav img {
 }
 
 .white-space {
-    width: 6.5vh;
-    height: 6.5vh;
+    width: 5vw;
+    height: 5vw;
     background-color: #fff;
     border-radius: 10px;
     display:flex;
@@ -134,18 +150,18 @@ nav img {
 /* start-button-area */
 .start-button-area {
     background-color: #fff;
-    border-radius: 55px;
-    height: 18vh;
+    border-radius: 3vh;
+    height: 14vh;
     margin:4vh auto 0;
     width: 40vw;
 }
 
 .star {
     position: absolute;
-    height: 7.5vw;
-    width: 7.5vw;
-    margin-top: -2vw;
-    margin-left: -2vw;
+    height: 9vh;
+    width: 9vh;
+    margin-top: -2.4vh;
+    margin-left: -2.4vh;
 }
 
 .start-button-textarea {
@@ -154,9 +170,8 @@ nav img {
 
 .start-button-h2 {
     position:relative;
-    font-size: 4vh;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
+    font-size: 3vh;
+    padding-top: 1vh;
     font-weight: 500;
     color:#34494B;
 }
@@ -168,13 +183,12 @@ nav img {
 }
 
 .first {
+    
 }
-
 /* ------------------------------------------------------------ */
 /* 여기서부터 second */
 .second {
-    display:none;
-    height: 120vh;
+    display:none;    
 }
 
 /* info-area */
@@ -214,6 +228,19 @@ nav img {
     margin: 0 auto;
 }
 
+.white-space2 {
+    width: 5vw;
+    height: 5vw;
+    background-color: #fff;
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:black;
+    border:1px solid rgba(0,0,0,1);
+}
+
 
 /* submit-area */
 .submit-area {
@@ -236,5 +263,116 @@ nav img {
 }
 
 #sol1, #sol2 {
+    display:none;
+}
+
+/* 여기서부터 third */
+.third {
+    display:none;
+}
+
+/* info-area2 */
+.info-area2 {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 15vw;
+    border-radius: 3vh;
+    width: 40vw;
+    margin: 13vw auto 0;
+    display:flex;
+    text-align: center;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.info-text2 {
+    color:white;
+    font-size: 2vw;
+    font-weight: 700;
+    margin-top: 2vw;
+}
+
+.lion-wakeup {
+    position: absolute;
+    height: 12vw;
+    width: 10vw;
+    margin-top: -12vw;
+    margin-left: calc(20vw - 5vw);
+}
+
+/* load-area*/
+.load-area {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 15vh;
+    width: 40vw;
+    border-radius: 3vh;
+    margin:3vh auto 0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+}
+
+.white-space3 {
+    width: 5vw;
+    height: 5vw;
+    background-color: #fff;
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:black;
+    border:1px solid rgba(0,0,0,1);
+}
+
+.white-space3-h2 {
+    width: 10vw;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    font-size: 2.8vh;
+    font-weight: 700;
+}
+
+.white-space-lionzone {
+    width: 5vw;
+    height: 5vw;
+    background-color: #fff;
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:black;
+    border:1px solid rgba(0,0,0,1);
+    margin-left: 5vw;
+}
+
+.white-space-lion3 {
+    left:0;
+    width: 4.5vw;
+    height: 4.5vw;
+    position: relative;   
+}
+
+/* keyword-area */
+.keyword-area {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 15vh;
+    width: 40vw;
+    border-radius: 3vh;
+    margin:3vh auto 0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+}
+
+.white-wrapper3 {
+    display:flex;
+    align-items: center;
+}
+
+#S2, #ST2, #STA2, #STAR2, #START2 {
     display:none;
 }
