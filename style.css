@@ -1,5 +1,5 @@
 body {
-    font-size: 20px;
+    
 }
 
 .navbar {
@@ -185,10 +185,42 @@ nav img {
 .first {
     
 }
+
+/* ------------------------------------------------------------ */
+/* 여기서부터 demo-play */
+
+.demo-play {
+    display:none;
+    height:90vh;
+}
+
+.info-area1 {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 15vh;
+    border-radius: 3vh;
+    margin:4vh auto 0;
+    width: 40vw;
+    display:flex;
+    text-align: center;
+    flex-direction:column;
+    justify-content:center;
+}
+
+#method-text3, #method-text4, #method-text5, #method-text6, #method-text7, #method-text8, #method-text9, #method-text10, #method-text11 {
+    display:none;
+}
+
+#method-key {
+    display:none;
+}
+
+.text-example {
+    font-size: 1.5vw;
+}
 /* ------------------------------------------------------------ */
 /* 여기서부터 second */
 .second {
-    display:none;    
+    display:none;
 }
 
 /* info-area */
@@ -208,6 +240,11 @@ nav img {
 .info-text {
     color:white;
     font-weight: 700;
+    font-size: 2.5vw;
+}
+
+.loop-info {
+    display:none;
 }
 /* example */
 .example {
