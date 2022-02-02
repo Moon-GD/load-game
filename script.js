@@ -1,27 +1,19 @@
-;(()=>{
-/*$('.first').click(()=> {
-    $('.first').fadeOut()
-        setTimeout(()=> {
-            $('.second').fadeIn()
-        }, 400)
-})*/
- 
+;(()=>{ 
 $('.first').click(()=> {
     $('.first').fadeOut()
     setTimeout(()=>{
         $('.demo-play').fadeIn()
-        $('#method1').css({"display":"none"})
     }, 400)
 })
 
 function goOn() {
-    $('#go').css({"background-color":"orange"})
+    $('#go').css({"background-color":"#FFB531"})
     $('#loop').css({"background-color":"white"})
 }
 
 function goOut() {
     $('#go').css({"background-color":"white"})
-    $('#loop').css({"background-color":"orange"})
+    $('#loop').css({"background-color":"#FFB531"})
 }
 
 function lionMove() {
@@ -44,7 +36,7 @@ $('.demo-play').click(()=>{
             $('#method-key').fadeIn()
         }, 1200)
         setTimeout(()=>{
-            $('#go2').css({"background-color":"orange"})
+            $('#go2').css({"background-color":"#FFB531"})
         }, 1600)
 
         setTimeout(()=>{
@@ -74,83 +66,99 @@ $('.demo-play').click(()=>{
             $('#first-letter').fadeIn()
             $('#go2').css({"background-color":"white"})
         }, 5300)
+
+        setTimeout(()=>{
+            $('#method-text5').html('Click to Continue')
+            $('#method-text5').fadeIn()
+        }, 5500)
         
         // 두 번째 이벤트
         setTimeout(()=>{
             $(".demo-play").on("click", function() {
                 $(".demo-play").off("click")
-                
+                setTimeout(()=>{
+                    $('#method-text5').fadeOut()
+                }, 400)
+
+
                 setTimeout(()=>{
                     $('#method-text6').fadeIn()
-                }, 300)
+                }, 1000)
                 
                 setTimeout(()=>{
                     $('#method-text6').fadeOut()
-                }, 1300)
+                }, 2000)
 
                 setTimeout(()=>{
                     $('#method-text7').fadeIn()
                     $('#method-text8').fadeIn()
-                }, 1900)
+                }, 2600)
 
                 setTimeout(()=>{
-                    $('#up2').css({"background-color":"orange"})
-                }, 2500)
-
-                setTimeout(()=>{
-                    $('#example-lion').css({"transform": "rotate(-90deg)"})
-                }, 2900)
-
-                setTimeout(()=>{
-                    $('#up2').css({"background-color":"white"})
+                    $('#up2').css({"background-color":"#FFB531"})
                 }, 3200)
 
                 setTimeout(()=>{
+                    $('#example-lion').css({"transform": "rotate(-90deg)"})
+                }, 3600)
+
+                setTimeout(()=>{
                     $('#up2').css({"background-color":"white"})
-                    $('#right2').css({"background-color":"orange"})
-                }, 3700)
+                }, 3900)
+
+                setTimeout(()=>{
+                    $('#up2').css({"background-color":"white"})
+                    $('#right2').css({"background-color":"#FFB531"})
+                }, 5000)
 
                 setTimeout(()=>{
                     $('#example-lion').css({"transform": "rotate(0deg)"})
-                }, 4100)
+                }, 5300)
 
                 setTimeout(()=>{
                     $('#right2').css({"background-color":"white"})
                     $('#method-text7').fadeOut()
                     $('#method-text8').fadeOut()
-                }, 4400)
+                }, 5700)
+
+                setTimeout(()=>{
+                    $('#method-text7').html('Click to Continue')
+                    $('#method-text7').fadeIn()
+                }, 6200)
 
                 // 세 번째 이벤트
                 setTimeout(()=>{
                     $(".demo-play").on("click", function() {
-                    
-
                         $(".demo-play").off("click")
-                
+                        
                         setTimeout(()=>{
-                            $('#method-text9').fadeIn()
+                            $('#method-text7').fadeOut()
                         }, 300)
 
                         setTimeout(()=>{
+                            $('#method-text9').fadeIn()
+                        }, 1000)
+
+                        setTimeout(()=>{
                             $('#method-text9').fadeOut()
-                        }, 1300)
+                        }, 2000)
 
                         setTimeout(()=>{
                             $('#method-text10').fadeIn()
                             $('#method-text11').fadeIn()
-                        }, 1900)
+                        }, 2600)
 
                         setTimeout(()=>{
                             $('#method-text10').fadeOut()
                             $('#method-text11').fadeOut()
-                        }, 3500)
+                        }, 4200)
 
                         setTimeout(()=> {
                             $('.demo-play').fadeOut()
                                 
                             setTimeout(()=>{
                                 $('.second').fadeIn()
-                            }, 700)
+                            }, 300)
 
                             // 반복에 대한 예시 이벤트
                             setTimeout(()=> {
@@ -194,48 +202,29 @@ $('.demo-play').click(()=>{
                                     }
                                     setTimeout(()=>{
                                         $('.second').fadeOut()
-                                    }, 6500)
+                                    }, 7000)
                             
                                     setTimeout(()=>{
                                         $('.third').fadeIn()
-                                    }, 7500)
+                                    }, 7430)
                                 }, 3000)
                             }, 1500)
 
 
-                        }, 4000)
+                        }, 4300)
                     })
 
-                }, 3000)
-                
+                }, 6300)
             })
         }, 5100)
 })
 
-
-$('.second').click(()=>{
-
-})
-
-let lion_out = ["#S1", "#ST1", "#STA1", "#STAR1", "#START1"]
-let lion_on = ["#S2", "#ST2", "#STA2", "#STAR2", "#START2"]
-$('#start-button-lion').click(()=>{
-    for(let i=0;i<5;i++)
-    {
-        setTimeout(()=>{
-            $('#start-button-lion').animate({left:"+=5vw"})
-        }, i * 200)
-        setTimeout(()=>{
-            $(lion_out[i]).fadeOut()
-        }, i * 400)
-        
-        setTimeout(()=>{
-            $(lion_on[i]).fadeIn()
-        }, i * 400)
-    }
+// let lion_out = ["#S1", "#ST1", "#STA1", "#STAR1", "#START1"]
+// let lion_on = ["#S2", "#ST2", "#STA2", "#STAR2", "#START2"]
+$('.third').click(()=>{
 
     setTimeout(()=>{
         $('.third').fadeOut()
-    }, 3000)
+    }, 300)
 })
 })()
