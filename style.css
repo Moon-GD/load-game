@@ -111,12 +111,13 @@ body {
 .white-space-up {
     width:5vh;
     height: 5vh;
-    transform: rotate(-90deg);
+    transform: rotate(-180deg);
 }
 
 .white-space-right {
     width: 5vh;
     height: 5vh;
+    transform: scaleX(-1);
 }
 
 /* start-button-area */

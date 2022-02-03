@@ -112,12 +112,23 @@
         [0, 0], [1, 0], [1, 1], [2, 1],
         [2, 2], [3, 2], [3, 3], [4, 3]
     ]
-
+    
+    let deg = 0
     function go() {
-        $('#LION').animate({left:"+=5vw"}, 500)
+        if(deg == 0 || deg == 360) {
+            $('#LION').animate({left:"+=5vw"}, 500)
+        }
+        else if(deg == 90 || deg == -270) {
+            $('#LION').animate({bottom:"-=5vw"}, 500)
+        }
+        else if(deg == -90 || deg == 270) {
+            $('#LION').animate({bottom:"+=5vw"}, 500)
+        }
+        else if(deg == 180 || deg == -180) {
+            $('#LION').animate({left:"-=5vw"}, 500)
+        }
     }
 
-    let deg = 0
     function north() {
         for(let i=0;i<90;i++)
         {
@@ -143,32 +154,56 @@
         }, 950)
     }
     
-    let order = ['#FIRST', '#SECOND', '#THIRD', '#FOURTH']
-    let i = 0
-    function play() {
-        i = 0
-        if( $(order[i]).html() == '<span class="white-space-text"></span>') {
-            i++
-        }
-        else if($(order[i]).html() == go_html) {
-            console.log('go')
-            i++
-        }
-        else if($(order[i]).html() == north_html) {
-            console.log('north')
-            i++
-        }
-        else if($(order[i]).html() == east_html) {
-            console.log('east')
-            i++
-        }
-        else if($(order[i]).html() == repeat_html) {
-            console.log('repeat')
-            i = 0
-        }
+    let order = ['#FIRST', '#SECOND', '#THIRD', '#FOURTH', '#FIFTH']
+    let i = 0, infinite = 0
+    
+    function play(i) {
+        content = $(order[i]).html()
+        return new Promise((resolve, reject) => {
+            if(content == repeat_html) {
+                i = 0
+                reject(i)
+            }
+            else if(content == go_html) {
+                resolve(go)
+            }
+            else if(content == east_html) {
+                resolve(east)
+            }
+            else if(content == north_html) {
+                resolve(north)
+            }
+            else if(i >= 5 || infinite > 20) {
+                window.location.reload()  // 일정 횟수가 넘어가면 페이지 리로드
+                reject(200)
+            }
+            else {
+                i++
+                reject(i)
+            }
+        })
     }
 
     $('.go-btn').click(() => {
-        play()
+        play(i)
+        .then((state)=>{
+            state()
+            i = i + 1
+            infinite++
+        })
+        .catch((index)=>{
+            i = index, infinite++
+            if(i == 0) {
+                play(i)
+                .then((state)=>{
+                    state()
+                    i = i + 1
+                    infinite++
+                })
+                .catch((index)=>{
+                    i = index, infinite++
+                })
+            }
+        })
     })
 })()

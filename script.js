@@ -99,7 +99,12 @@ $('.demo-play').click(()=>{
                 }, 3200)
 
                 setTimeout(()=>{
-                    $('#example-lion').css({"transform": "rotate(-90deg)"})
+                    let deg = 0
+                    for(let i=0;i<90;i++) {
+                        setTimeout(()=>{
+                            $('#example-lion').css({"transform":`rotate(${deg - i * 1}deg)`})
+                        }, i * 10)
+                    }
                 }, 3600)
 
                 setTimeout(()=>{
@@ -112,7 +117,13 @@ $('.demo-play').click(()=>{
                 }, 5000)
 
                 setTimeout(()=>{
-                    $('#example-lion').css({"transform": "rotate(0deg)"})
+                    let deg = -90
+                    for(let i=0;i<90;i++) {
+                        setTimeout(()=>{
+                            $('#example-lion').css({"transform":`rotate(${deg + i * 1}deg)`})
+                        }, i * 10)
+                    }
+                    
                 }, 5300)
 
                 setTimeout(()=>{
@@ -222,9 +233,9 @@ $('.demo-play').click(()=>{
 // let lion_out = ["#S1", "#ST1", "#STA1", "#STAR1", "#START1"]
 // let lion_on = ["#S2", "#ST2", "#STA2", "#STAR2", "#START2"]
 $('.third').click(()=>{
-
     setTimeout(()=>{
         $('.third').fadeOut()
+        location = 'game.html'
     }, 300)
 })
 })()
